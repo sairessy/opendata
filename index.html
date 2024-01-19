@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Opendata</title>
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/themes/prism.min.css" integrity="sha512-/mZ1FHPkg6EKcxo0fKXF51ak6Cr2ocgDi5ytaTBjsQZIH/RNs6GF6+oId/vPe3eJB836T36nXwVh/WBl/cWT4w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js" integrity="sha512-UOoJElONeUNzQbbKQbjldDf9MwOHqxNz49NNJJ1d90yp+X9edsHyJoAs6O4K19CZGaIdjI5ohK+O2y5lBTW6uQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+	<aside>
+		<h1>Opendata</h1>		
+		<ul>
+			<li><a href="">Bairros e distritos (Maputo)</a></li>
+		</ul>
+
+		<footer>
+			<strong>Email:</strong> sairessy@gmail.com<br/>
+			<strong>Tel.:</strong> (+258) 872081978
+		</footer>
+	</aside>
+	<section>
+		<h1>Bairros e distritos</h1>
+		<p>Retorna todos os distritos da PROVINCIA</p>
+		<code>
+			GET <a href="https://api-master.cyclic.app/maputo/distritos" target="_blank">https://api-master.cyclic.app/maputo/distritos</a>
+		</code>
+
+		<pre>
+			<code class="language-html">
+			[
+				{
+					"id": 0,
+					"label": "KaMavota",
+					"id_provincia": 0
+					},
+				...
+			]		
+			</code>
+		</pre>
+
+		<p>Retorna todos os bairos da da PROVINCIA</p>
+		<code>
+			GET <a href="https://api-master.cyclic.app/maputo/bairros/all">https://api-master.cyclic.app/maputo/bairros/{DISTRITO}</a>
+		</code>
+		<pre>
+			<code class="language-html">
+				[
+					{
+					"id": 13,
+					"label": "Mafalala",
+					"id_distrito": 2
+					},
+					...
+				]
+			</code>
+		</pre>
+
+		<p>Retorna todos os bairos da da PROVINCIA e DISTRITO</p>
+		<code>
+			GET <a href="https://api-master.cyclic.app/maputo/bairros/2">https://api-master.cyclic.app/maputo/bairros/{DISTRITO}</a>
+		</code>
+
+		<pre>
+			<code class="language-html">
+			{
+				"distrito": {
+				"id": 2,
+				"label": "KaMaxakeni",
+				"id_provincia": 0
+				},
+				"bairros": [
+					{
+					"id": 13,
+					"label": "Mafalala",
+					"id_distrito": 2
+					},
+					...
+				]
+			}
+			<code>
+		</pre>
+	</section>
+</body>
+</html>

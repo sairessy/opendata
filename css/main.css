@@ -1,0 +1,51 @@
+@font-face {
+	src: url('../assets/fonts/Comfortaa-VariableFont_wght.ttf');
+	font-family: Anton;
+}
+
+body {
+	display: flex;
+	padding: 0;
+	margin: 0;
+	font-family: arial;
+}
+
+a {
+	text-decoration: none;
+	color: blue;
+	font-weight: bold;
+}
+
+ul {
+	list-style: none;
+}
+
+aside {
+	padding: 0px 15px;
+	background-color: #eee;
+	min-height: 100vh;
+	flex: 0.3;
+	position: relative;
+}
+
+section {
+	padding: 15px;
+	flex: 1;
+}
+
+aside h1 {
+	font-weight: bolder;
+	font-size: 36px;
+	font-family: Anton;
+
+}
+
+ul li {
+
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	padding: 20px;
+}
